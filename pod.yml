@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fitfuel-pod
+  namespace: fitfuel
+  labels:
+    app: fitfuel
+spec:
+  containers:
+    - name: fitfuel-container
+      image: docker.io/23800/fitfuel-express:latest
+
+      ports:
+        - containerPort: 80

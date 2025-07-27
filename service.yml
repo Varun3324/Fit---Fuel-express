@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fitfuel-service
+  namespace: fitfuel
+spec:
+  selector:
+    app: fitfuel
+  ports:
+    - protocol: TCP
+      port: 80            # ClusterIP port
+      targetPort: 80      # Container port
+  type: ClusterIP         # You can use NodePort or LoadBalancer on cloud
